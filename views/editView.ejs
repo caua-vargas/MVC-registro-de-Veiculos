@@ -1,0 +1,43 @@
+<h2 class="text-center">Editar veículo</h2>
+<form method="POST" enctype="multipart/form-data" class="d-flex flex-column align-items-center gap-4">
+    <input type="hidden" name="id" value="<%= carro.idCarro %>" />
+
+    <div class="d-flex flex-column w-50">
+        <label for="modelo">Modelo:</label>
+        <input type="text" name="modelo" value="<%= carro.modelo %>" />
+    </div>
+
+    <div class="d-flex flex-column w-50">
+        <label for="placa">Placa:</label>
+        <input type="text" name="placa" value="<%= carro.placa %>" />
+    </div>
+
+    <div class="d-flex flex-column w-50">
+        <label for="ano">Ano de fabricação:</label>
+        <input type="number" name="ano" value="<%= carro.ano %>" />
+    </div>
+
+    <div class="d-flex flex-column w-50">
+        <label for="fabricante">Fabricante:</label>
+        <input type="text" name="fabricante" value="<%= carro.fabricante %>" />
+    </div>
+
+    <div class="d-flex flex-column w-50">
+        <label for="renavam">Renavam:</label>
+        <input type="text" name="renavam" value="<%= carro.renavam %>" />
+    </div>
+
+    <div>
+        <label for="filetoupload">Imagem do veículo</label>
+        <input type="file" name="filetoupload" required/>
+    </div>
+
+    <button type="submit" formaction="/carro/update" class="btn btn-success px-5">
+        Salvar
+    </button>
+</form>
+<div class="d-flex flex-column align-items-center">
+    <a class="text-decoration-none mt-3" href="/carros">
+        <button class="btn btn-dark px-5">Voltar</button>
+    </a>
+</div>
